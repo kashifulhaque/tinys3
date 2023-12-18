@@ -27,15 +27,19 @@ cd tinys3
 cargo run
 ```
 
-This will start the server on `http://127.0.0.1:8080`. Open your web browser and visit [http://127.0.0.1:8080](http://127.0.0.1:8080) to see the "Hello World!" message.
+This will start two servers on
+- `http://0.0.0.0:9090`
+- `http://0.0.0.0:9000`
+
+Open your web browser and visit [http://127.0.0.1:9090](http://127.0.0.1:9090) to see the portal.
 
 ## Explore Endpoints 🌐
 
-- **Root Endpoint:**
-  - [http://127.0.0.1:8080](http://127.0.0.1:8080)
+- **Root Endpoint (API):**
+  - [http://127.0.0.1:9000/](http://127.0.0.1:9000/)
 
 - **Echo Endpoint (POST):**
-  - Use a tool like [curl](https://curl.se/) or [Postman](https://www.postman.com/) to send a POST request to [http://127.0.0.1:8080/echo](http://127.0.0.1:8080/echo) with a request body. The server will echo back the provided data.
+  - Use a tool like [curl](https://curl.se/) or [Postman](https://www.postman.com/) to send a POST request to [http://127.0.0.1:9000/echo](http://127.0.0.1:9000/echo) with a request body. The server will echo back the provided data.
 
-- **Manual Index Endpoint:**
-  - [http://127.0.0.1:8080/api](http://127.0.0.1:8080/api)
+- **Portal:**
+  - [http://127.0.0.1:9090/](http://127.0.0.1:9090/)

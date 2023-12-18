@@ -2,21 +2,11 @@ use actix_web::{ get, post, App, HttpResponse, HttpServer, Responder };
 use futures::try_join;
 
 #[get("/")]
-async fn index() -> impl Responder {
-  HttpResponse::Ok().body("Hello World!")
-}
-
-#[post("/echo")]
-async fn echo(req_body: String) -> impl Responder {
-  HttpResponse::Ok().body(req_body)
-}
-
-#[get("/api")]
 async fn api_index() -> impl Responder {
   HttpResponse::Ok().body("Hello world from API")
 }
 
-#[post("/api/echo")]
+#[post("/echo")]
 async fn api_echo(req_body: String) -> impl Responder {
   HttpResponse::Ok().body(req_body)
 }
