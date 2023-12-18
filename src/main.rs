@@ -34,14 +34,14 @@ async fn main() -> std::io::Result<()> {
       .service(api_index)
       .service(api_echo)
   })
-  .bind(("127.0.0.1", 9000))?;
+  .bind(("0.0.0.0", 9000))?;
 
   // Create the portal server
   let portal_server = HttpServer::new(|| {
     App::new()
       .service(portal_index)
   })
-  .bind(("127.0.0.1", 9090))?;
+  .bind(("0.0.0.0", 9090))?;
 
   // Start both the servers concurrently
   try_join!(api_server.run(), portal_server.run())?;
